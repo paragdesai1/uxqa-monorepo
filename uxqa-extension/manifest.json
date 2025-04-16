@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "UXQA Overlay Extension",
+  "version": "1.0",
+  "description": "Overlays Figma design frames on live sites for QA.",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
